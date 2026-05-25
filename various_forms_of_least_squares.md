@@ -41,7 +41,7 @@ For the sake of argument, suppose that the network structure follows a Structura
 
 
 ```math
-\hat{\mathbf{A}}_{\mathrm{L1Norm}}
+\hat{\mathbf{A}}_{\mathrm{Lasso}}
 =
 \arg\min_{\mathbf{A}}
 \left\|
