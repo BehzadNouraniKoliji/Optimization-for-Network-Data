@@ -52,4 +52,20 @@ In this file, I present several optimization frameworks for learning different t
 \|\mathbf{A}\|_1
 ```
 
+```math
+\hat{\mathbf{A}}_{\mathrm{TV}}
+=
+\arg\min_{\mathbf{A}}
+\left\|
+\mathbf{X} - \mathbf{A}\mathbf{X}
+\right\|_2^2
++
+\gamma
+\sum_{i,j}
+|A_{i,j}|
+\sum_k
+|X_{ik} - X_{jk}|
+\tag{2}
+```
+
 
