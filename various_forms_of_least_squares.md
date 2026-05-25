@@ -7,8 +7,8 @@ In this file, I present several optimization frameworks for learning different t
 
 ### Learning a directed network 
 
-$$
-\hat{\mathbf{A}}_{Di\text{-}TV}
+```math
+\hat{\mathbf{A}}_{\mathrm{Di\text{-}TV}}
 =
 \arg\min_{\mathbf{A}}
 \left\|
@@ -19,11 +19,11 @@ $$
 \sum_{i,j}
 |A_{i,j}|
 \sum_k
-[X_{ik} - X_{jk}]^{+}
-$$
+\left[X_{ik} - X_{jk}\right]^+
+```
 
-$$
-\hat{\mathbf{A}}_{TV}
+```math
+\hat{\mathbf{A}}_{\mathrm{TV}}
 =
 \arg\min_{\mathbf{A}}
 \left\|
@@ -35,10 +35,10 @@ $$
 |A_{i,j}|
 \sum_k
 |X_{ik} - X_{jk}|
-$$
+```
 
-$$
-\hat{\mathbf{A}}_{L1Norm}
+```math
+\hat{\mathbf{A}}_{\mathrm{L1Norm}}
 =
 \arg\min_{\mathbf{A}}
 \left\|
@@ -47,5 +47,6 @@ $$
 +
 \gamma
 \|\mathbf{A}\|_1
-$$
+```
+
 
