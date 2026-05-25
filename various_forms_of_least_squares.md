@@ -7,6 +7,7 @@ In this file, I present several optimization frameworks for learning different t
 
 ### Learning a directed network 
 
+**(1)**
 ```math
 \hat{\mathbf{A}}_{\mathrm{Di\text{-}TV}}
 =
@@ -22,6 +23,7 @@ In this file, I present several optimization frameworks for learning different t
 \left[X_{ik} - X_{jk}\right]^+
 ```
 
+**(2)**
 ```math
 \hat{\mathbf{A}}_{\mathrm{TV}}
 =
@@ -37,6 +39,7 @@ In this file, I present several optimization frameworks for learning different t
 |X_{ik} - X_{jk}|
 ```
 
+**(3)**
 ```math
 \hat{\mathbf{A}}_{\mathrm{L1Norm}}
 =
