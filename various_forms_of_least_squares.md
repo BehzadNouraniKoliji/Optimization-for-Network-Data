@@ -19,7 +19,7 @@ A \in \mathbb{R}_{-,+,0}^{m \times m}
 ```
 
 
-* The following formulation indicates that we apriori know that the network is directed and the nodes with higher signal values impose the direction of the network edges on their neighboring nodes with smaller signal values. This property is imposed on the learning algorithm via the following term  $[\cdot]^+ = \max(\cdot, 0)$. The optimization has a convex but non-smooth form. There are famous solutions such as ISTA and FISTA for it. The CVXPY implementation of the optimization problem is provided in the corresponding Jupyter Notebook.
+* The following formulation indicates that we apriori know that the network is directed and the nodes with lower signal values impose the direction of the network edges on their neighboring nodes with higher signal values. This property is imposed on the learning algorithm via the following term  $[\cdot]^+ = \max(\cdot, 0)$. The optimization has a convex but non-smooth form. There are famous solutions such as ISTA and FISTA for it. The CVXPY implementation of the optimization problem is provided in the corresponding Jupyter Notebook. $\gamma$ is found via cross-validation.
 
 ```math
 \hat{\mathbf{A}}_{\mathrm{Di\text{-}TV}}
@@ -35,7 +35,7 @@ A \in \mathbb{R}_{-,+,0}^{m \times m}
 \sum_k
 \left[Y_{ik} - Y_{jk}\right]^+
 ```
-
+* The following formulation assumes that the network is **undirected**, and the regularization term penalizes the presence of an edge $(i,j)$ proportionally to the absolute signal difference between nodes $i$ and $j$, without imposing any directional preference. This is reflected in the use of the absolute value $|\cdot|$ rather than the one-sided operator $[\cdot]^+ = \max(\cdot, 0)$, making the penalty symmetric with respect to the two endpoints of each edge. The optimization retains a **convex but non-smooth** form, and standard proximal algorithms such as ISTA and FISTA remain directly applicable. The CVXPY implementation of the optimization problem is provided in the corresponding Jupyter Notebook. $\gamma$ is found via cross-validation.
 
 ```math
 \hat{\mathbf{A}}_{\mathrm{TV}}
