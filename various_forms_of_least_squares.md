@@ -64,7 +64,7 @@ A \in \mathbb{R}_{-,+,0}^{m \times m}
 \gamma
 \|\mathbf{A}\|_1
 ```
-* The following formulation assumes **no prior knowledge** on the structure of the network. The regularization term penalizes the entries of $\mathbf{A}$ uniformly via an $\ell_2$ norm, encouraging small but generally **non-sparse** connectivity weights without encoding any preference for directionality or edge weighting based on signal values. This corresponds to the classical **Ridge** regularization, where all edges are shrunk smoothly toward zero rather than being driven to exact sparsity. Crucially, unlike the Lasso, Di-TV, and TV formulations, the optimization is **convex and smooth**, admitting a **closed-form solution** via the normal equations, and proximal algorithms are not required. The CVXPY implementation of the optimization problem is provided in the corresponding Jupyter Notebook. $\gamma$ is found via cross-validation.
+* The following formulation assumes **no prior knowledge** on the structure of the network. The regularization term penalizes the entries of $\mathbf{A}$ uniformly via an $\ell_2$ norm, encouraging small but generally **non-sparse** connectivity weights without encoding any preference for directionality or edge weighting based on signal values. This corresponds to the classical **Ridge** regularization, where all edges are shrunk smoothly toward zero rather than being driven to exact sparsity. Crucially, unlike the Lasso, Di-TV, and TV formulations, the optimization is **convex and smooth**, admitting a **closed-form solution** via the normal equations, and proximal algorithms are not required. 
 
 ```math
 \hat{\mathbf{A}}_{\mathrm{Ridge}}
