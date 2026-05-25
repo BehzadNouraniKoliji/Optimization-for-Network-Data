@@ -12,10 +12,11 @@ For the sake of argument, suppose that the network structure follows a Structura
 \mathcal{A}_m
 =
 \left\{
-A \in \mathbb{R}_{-,+,0}^{m \times m}
+A \in \mathbb{R}^{m \times m}
 \;:\;
+A_{ij} \in \{-1,+1,0\},
 \operatorname{diag}(A)=0
-\right\}.
+\right\}
 ```
 
 
