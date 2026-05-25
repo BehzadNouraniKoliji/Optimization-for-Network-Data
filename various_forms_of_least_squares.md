@@ -7,6 +7,7 @@ In this file, I present several optimization frameworks for learning different t
 
 ### Learning a directed network 
 For the sake of argument, suppose that the network structure follows a Structural Equation Model (SEM). In this setting, $\mathbf{A}$ denotes the $K \times K$ network structure matrix, where $K$ is the number of entities (nodes) in the network. Moreover, $\mathbf{Y}$ represents the endogenous variables, while $\mathbf{X}$ represents the exogenous inputs of the SEM. Both $\mathbf{Y}$ and $\mathbf{X}$ have dimensions $K \times d$, where $d$ denotes the number of observations collected from the network. In all the following formulas, there is one condition for the optimizations,  
+
 ```math
 \mathcal{A}_m
 =
@@ -18,7 +19,7 @@ A \in \mathbb{R}_{-,+,0}^{m \times m}
 ```
 
 
-* The following formulation indicates that we apriori know that the network is directed and the nodes with higher signal values impose the direction of the network edges on their neighboring nodes with smaller signal values. This property is imposed on the learning algorithm via the following term ```math [\cdot]^+ = \max(\cdot, 0) ```. The optimization has a convex but non-smooth form. There are famous solutions such as ISTA and FISTA for it. The CVXPY implementation of the optimization problem is provided in the corresponding Jupyter Notebook.
+* The following formulation indicates that we apriori know that the network is directed and the nodes with higher signal values impose the direction of the network edges on their neighboring nodes with smaller signal values. This property is imposed on the learning algorithm via the following term  $[\cdot]^+ = \max(\cdot, 0)$. The optimization has a convex but non-smooth form. There are famous solutions such as ISTA and FISTA for it. The CVXPY implementation of the optimization problem is provided in the corresponding Jupyter Notebook.
 
 ```math
 \hat{\mathbf{A}}_{\mathrm{Di\text{-}TV}}
