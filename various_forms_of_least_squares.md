@@ -52,5 +52,17 @@ For the sake of argument, suppose that the network structure follows a Structura
 \|\mathbf{A}\|_1
 ```
 
+```math
+\hat{\mathbf{A}}_{\mathrm{Lasso}}
+=
+\arg\min_{\mathbf{A}}
+\left\|
+\mathbf{Y} - \mathbf{A}\mathbf{Y} - \mathbf{X}
+\right\|_2^2
++
+\gamma
+\|\mathbf{A}\|_2
+```
+
 
 
