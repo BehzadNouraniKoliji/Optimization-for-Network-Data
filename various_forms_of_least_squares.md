@@ -14,8 +14,8 @@ A_m
 \left\{
 A \in \mathbb{R}_{-,+,0}^{m \times m}
 \;:\;
-\operatorname{diag}(A)=0
-\right\}
+\mathrm{diag}(A)=0
+\right\}.
 ```
 
 
