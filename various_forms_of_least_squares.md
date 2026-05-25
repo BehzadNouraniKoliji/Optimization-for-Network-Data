@@ -5,3 +5,47 @@ One important class of optimization problems arising in network data analysis co
 
 In this file, I present several optimization frameworks for learning different types of network structures from data. The choice of optimization framework depends on the prior knowledge available about the network. For example, if we know that the underlying network is undirected, we employ formulations that explicitly infer symmetric or undirected structures. Such assumptions act as inductive biases that are injected into the network structure learning problem to guide the optimization toward meaningful and interpretable solutions.
 
+### Learning a directed network 
+
+$$
+\hat{\mathbf{A}}_{Di\text{-}TV}
+=
+\arg\min_{\mathbf{A}}
+\left\|
+\mathbf{X} - \mathbf{A}\mathbf{X}
+\right\|_2^2
++
+\gamma
+\sum_{i,j}
+|A_{i,j}|
+\sum_k
+[X_{ik} - X_{jk}]^{+}
+$$
+
+$$
+\hat{\mathbf{A}}_{TV}
+=
+\arg\min_{\mathbf{A}}
+\left\|
+\mathbf{X} - \mathbf{A}\mathbf{X}
+\right\|_2^2
++
+\gamma
+\sum_{i,j}
+|A_{i,j}|
+\sum_k
+|X_{ik} - X_{jk}|
+$$
+
+$$
+\hat{\mathbf{A}}_{L1Norm}
+=
+\arg\min_{\mathbf{A}}
+\left\|
+\mathbf{X} - \mathbf{A}\mathbf{X}
+\right\|_2^2
++
+\gamma
+\|\mathbf{A}\|_1
+$$
+
